@@ -1,0 +1,864 @@
+/*
+* ----------------------------------------------------------------------------------------
+Author       : Perfectcoder
+Template Name: Jhon - Personal Portfolio Template
+Version      : 1.0
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 01.GLOBAL CSS STYLE
+* 02.PRELOADER & BOUNCE CCS STYLE
+* 03.HOMEPAGE CSS STYLE
+    -LOGO CSS
+    -MENU CSS
+* 04.ABOUT CSS STYLE
+* 05.SERVICE CSS STYLE
+    -SINGLE SERVICE CSS
+* 05.RESUME CSS STYLE
+* 07.WORK CSS STYLE
+* 08.CALL TO ACTION CSS STYLE
+* 09.TESTIMONIAL CSS STYLE
+* 10.CONTACT CSS STYLE
+* 11.FOOTER CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 01.GLOBAL STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+body {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 1px;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: #515769;
+}
+
+html,
+body {
+    height: 100%
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {}
+
+a {
+    text-decoration: none;
+    -webkit-transition: all 0.4s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    color: #000;
+}
+
+img {
+    width: 100%;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+fieldset {
+    border: 0 none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.no-padding {
+    padding: 0
+}
+
+.section-padding {
+    padding: 70px 0px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    margin-top: 0;
+    font-weight: 900;
+    text-transform: capitalize;
+    font-size: 30px;
+    color: #515769;
+}
+
+.section-title p {
+    font-weight: 300;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 02.PRELOADER & BOUNCE CCS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+#preloader-area {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    text-align: center
+}
+
+.loader {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center
+}
+
+.loader div {
+    display: inline-block;
+    background-color: #000;
+    width: 14px;
+    height: 14px;
+    margin: 3px;
+    border-radius: 50%;
+    -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+    animation: bouncedelay 1.2s infinite ease-in-out;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+.loaded #loader-wrapper {
+    visibility: hidden;
+    background: rgba(255, 255, 255, 0);
+    -webkit-transition: ease-out .3s;
+    transition: ease-out .3s
+}
+
+.loaded #loader-wrapper,
+.loaded .loader {
+    -webkit-transition: ease-out .3s;
+    -moz-transition: ease-out .3s;
+    -o-transition: ease-out .3s
+}
+
+.loaded .loader {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transition: ease-out .3s;
+    transition: ease-out .3s
+}
+
+.loader .bounce1 {
+    -webkit-animation-delay: -.32s;
+    animation-delay: -.32s
+}
+
+.loader .bounce2 {
+    -webkit-animation-delay: -.16s;
+    animation-delay: -.16s
+}
+
+@-webkit-keyframes bouncedelay {
+    0%,
+    100%,
+    80% {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+    40% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@keyframes bouncedelay {
+    0%,
+    100%,
+    80% {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+    40% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 03.HOMEPAGE CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.welcome-area {
+    height: 100%;
+}
+.welcome-image-area {
+    position: relative;
+    height: 100%;
+    background: url(../images/bg/bg.jpg);
+    background-size: cover;
+    z-index: 1;
+    background-attachment: fixed;
+}
+
+.welcome-image-area:after {
+    position: absolute;
+    background: rgba(0, 0, 0, .6);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+}
+
+.display-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.display-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.header-text h2 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.header-social-links {}
+
+.header-social-links li {
+    display: inline-block;
+    margin: 0px 6px;
+}
+
+.header-social-links li a {
+    display: block;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, .5);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+}
+
+.header-social-links li a i.facebook {
+    color: #1458AB;
+}
+
+.header-social-links li a i.twitter {
+    color: #1DA1F2;
+}
+
+.header-social-links li a i.dribbble {
+    color: #C32361;
+}
+
+.header-social-links li a i.instagram {
+    color: #7A36AD;
+}
+
+.header-top-area {
+    padding-top: 30px;
+    padding-bottom: 25px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+
+.logo {
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.logo a {
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.mainmenu .navbar-nav li {
+    margin-left: 30px;
+}
+
+.mainmenu .navbar-nav li a {
+    color: #fff;
+    padding: 0;
+    text-transform: capitalize;
+    font-size: 13px;
+    letter-spacing: 1px;
+    -webkit-transition: .3s;
+    transition: .3s;
+    font-weight: 300;
+}
+
+.menu-bg .mainmenu ul.nav.navbar-nav li.active a {
+    color: #ccc;
+}
+
+.nav li a:focus,
+.nav li a:hover {
+    background: none;
+    color: #ccc;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.navbar {
+    min-height: 0px;
+    margin: 0;
+}
+
+.menu-bg {
+    background: #000;
+    box-shadow: 0 2px 10px -1px rgba(87, 97, 100, 0.35);
+    -webkit-transition: .3s;
+    transition: .3s;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
+.menu-bg .logo a {
+    color: #fafafa;
+}
+
+.menu-bg .mainmenu .navbar-nav li a {
+    color: #fafafa;
+}
+
+.menu-bg .mainmenu .navbar-nav li a:hover {
+    color: #fafafa;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 04.ABOUT CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.about-text h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+.about-text h2 strong {
+    color: #000;
+}
+
+.about-text p {
+    font-weight: 300;
+}
+
+.about-text a {
+    display: inline-block;
+    color: #000;
+    padding: 6px 10px;
+    margin-top: 20px;
+    border: 1px solid #000;
+    text-transform: capitalize;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.about-text a:hover {
+    background: #000;
+    border: 1px solid #000;
+    -webkit-transition: .3s;
+    transition: .3s;
+    color: #fafafa;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 05.SERVICE CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.service-area {
+    background: #FAFAFA;
+}
+
+.single-service {
+    text-align: center;
+    background: #fff;
+    padding: 30px 20px;
+    -webkit-transition: .3s;
+    transition: .3s;
+    border-top: 2px solid #fff;
+}
+
+.single-service:hover {
+    border-top: 2px solid #000;
+}
+
+.single-service i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #000;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.single-service:hover.single-service i {
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.single-service h2 {
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin: 20px 0px;
+    -webkit-transition: .3s;
+    transition: .3s;
+    color: #515769;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 06. WORK EXPERIENCE & EDUCATION CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.work-experience-area {}
+
+.single-experience {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+}
+
+.single-experience h2 {
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.single-experience h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.single-experience span {
+    float: right;
+    margin-top: -62px;
+    font-size: 14px;
+    font-weight: 300;
+    background: #000;
+    padding: 2px 5px;
+    color: #fff;
+    border-radius: 2px;
+}
+
+h2.education-heading {
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 07.WORK CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.work {
+    background: #FAFAFA;
+}
+
+.work-inner .mix {
+    display: none;
+}
+
+ul.work {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+ul.work li {
+    display: inline-block;
+    padding-bottom: 4px;
+    margin: 0 8px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    border-bottom: 2px solid transparent;
+}
+
+ul.work li:hover {
+    color: #000;
+    -webkit-transition: .3s;
+    transition: .3s;
+    border-bottom: 2px solid #000;
+}
+
+ul.work li.active {
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+.work .item {
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work .item img {
+    width: 100%;
+}
+
+.work .col-md-4 {
+    padding: 0;
+}
+
+.work .item {
+    padding: 0;
+    margin: 0;
+}
+
+.work figure.effect-julia img {
+    height: auto;
+    width: 100%;
+}
+
+.work .grid figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    min-width: 320px;
+    max-width: 480px;
+    max-height: 360px;
+    width: 100%;
+    height: auto;
+    background: #000;
+    text-align: center;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.work figure.effect-bubba h2 {
+    margin-top: 20%;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 600;
+    -webkit-transition: .3s;
+    transition: .3s;
+    background: #fff;
+    display: inline-block;
+    padding: 4px 10px;
+    color: #000;
+}
+
+.work figure.effect-bubba p {
+    font-size: 16px;
+    text-transform: lowercase;
+}
+
+.work figure.effect-bubba p strong {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-right: 5px;
+}
+
+.work .item:hover figure.effect-bubba h2 {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 08. CALL TO ACTION CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.call-to-action-area {
+    background: #000;
+    padding: 120px 0px;
+}
+
+.call-to-action-text p {
+    color: #fff;
+}
+
+.call-to-action-text h2 {
+    margin-top: 0;
+    font-weight: 900;
+    text-transform: capitalize;
+    font-size: 40px;
+    color: #fff;
+}
+
+.call-to-action-text a {
+    margin-top: 0;
+    font-weight: 900;
+    text-transform: capitalize;
+    font-size: 30px;
+    color: #fff;
+}
+.call-to-action-text a{
+    display: inline-block;
+    color: #fafafa;
+    padding: 6px 10px;
+    margin-top: 10px;
+    border: 1px solid #fff;
+    text-transform: capitalize;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: 300;
+}
+
+.call-to-action-text a:hover {
+    background: #fff;
+    border: 1px solid #fff;
+    -webkit-transition: .3s;
+    transition: .3s;
+    color: #000;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 09.TESTIMONIAL CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.testimonial-area {
+    padding: 100px 0px;
+}
+
+.testimonial-area .section-title h2 {
+    color: #fff;
+}
+
+.testimonial-list {}
+
+.single-testimonial {
+    background: #FAFAFA;
+    padding: 30px;
+}
+
+.single-testimonial h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.single-testimonial h3 {
+    font-size: 12px;
+    text-transform: capitalize;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+.single-testimonial p {
+    line-height: 25px;
+}
+
+.single-testimonial i {
+    color: #000;
+    background: #fff;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+}
+
+.owl-theme .owl-controls .owl-page span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    border-radius: 20px;
+    background: #000;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 10.CONTACT CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.contact-me-area {
+    background: #FAFAFA;
+}
+
+.contact-form {
+    border-radius: 3px;
+    margin-top: 30px;
+}
+
+.form-control {
+    display: block;
+    border: 0px;
+    width: 100%;
+    height: 45px;
+    padding: 5px 10px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 0px;
+    box-shadow: none;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+.form-control:focus {
+    border-color: #000;
+    outline: 0;
+    box-shadow: none;
+}
+
+.contact-form input[type='submit'] {
+    display: inline-block;
+    color: #000;
+    background: none;
+    padding: 10px 10px;
+    border: 1px solid #000;
+    font-size: 14px;
+    font-weight: 300;
+    -webkit-transition: .3s;
+    transition: .3s;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    letter-spacing: 2px;
+}
+
+.contact-form input[type='submit']:hover {
+    background: #000;
+    border: 1px solid #000;
+    color: #fafafa;
+    -webkit-transition: all 0.4s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn.focus:active,
+.btn:active:focus,
+.btn:focus {
+    outline: none;
+}
+
+.success {
+    background: #50B948 none repeat scroll 0 0;
+    color: #fff;
+    font-weight: 700;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 11.FOOTER CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.footer-area {
+    background: #000;
+    padding: 120px 0px;
+}
+
+.footer-area p {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #fff;
+    text-align: right;
+    line-height: 20px;
+}
+
+.footer-social-link {
+    margin-bottom: 10px;
+}
+
+.footer-social-link ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-social-link ul li {
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+.footer-social-link ul li a {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.footer-social-link ul li a:hover {
+    letter-spacing: 3px;
+}
